@@ -7,7 +7,7 @@ int main()
     srand(time(NULL));
 
     int n = rand() % 100+1;
-
+    int i=0;
     char w = 0;
 
     do
@@ -26,9 +26,10 @@ int main()
         }
         else
         {
-            printf("Wygrales!\n");
+            printf("Wygrales! w %d probie \n",i+1);
             w = 1;
         }
+	i++;
 
     }
     while (w == 0);
