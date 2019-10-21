@@ -7,14 +7,16 @@ namespace GuessTheNumber
         static void Main(string[] args)
         {
             Random r = new Random();
-            int n = r.Next(100);
+            int n = r.Next(1,101);
 
             bool w = false;
+            int i = 0;
 
             do
             {
                 Console.Write("Podaj liczbę: ");
                 string s = Console.ReadLine();
+                i++;
 
                 int l = int.Parse(s);
                 
@@ -28,7 +30,7 @@ namespace GuessTheNumber
                 }
                 else
                 {
-                    Console.WriteLine("Wygrałeś!");
+                    Console.WriteLine("Wygrałeś w {0} probie!", i);
                     w = true;
                 }
 
