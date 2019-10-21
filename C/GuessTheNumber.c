@@ -6,7 +6,7 @@ int main()
 {
     srand(time(NULL));
 
-    int n = rand() % 101;
+    int n = rand() % 100;
 
     char w = 0;
 
