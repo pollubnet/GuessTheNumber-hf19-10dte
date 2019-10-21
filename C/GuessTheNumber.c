@@ -14,7 +14,7 @@ int main()
     {
         int guess;
         printf("Podaj liczbe: ");
-        scanf("%d", &l);
+        scanf("%d", &guess);
         
         if (guess > number)
         {
@@ -29,9 +29,9 @@ int main()
         else
         {
             printf("Gratulacje: Wygrales w %d probie!\n");
-            w = true;
+            win = true;
         }
 
     }
-    while (w == false);
+    while (win == false);
 }
