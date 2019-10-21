@@ -7,7 +7,7 @@ int main()
     srand(time(NULL));
 
     int attempts = 1;
-    bool win = false;
+    char win = 0;
     int number = rand() % 100 + 1;
 
     do
@@ -29,9 +29,9 @@ int main()
         else
         {
             printf("Gratulacje: Wygrales w %d probie!\n");
-            win = true;
+            win = 1;
         }
 
     }
-    while (win == false);
+    while (win == 1);
 }
