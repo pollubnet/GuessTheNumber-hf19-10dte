@@ -6,30 +6,32 @@ int main()
 {
     srand(time(NULL));
 
-    int n = (rand() % 100) + 1;
-
-    char w = 0;
+    int attempts = 1;
+    char win = 0;
+    int number = rand() % 100 + 1;
 
     do
     {
+        int guess;
         printf("Podaj liczbe: ");
-        int l;
-        scanf("%d", &l);
+        scanf("%d", &guess);
         
-        if (l > n)
+        if (guess > number)
         {
-            printf("Za duzo!\n");
+            printf("%d proba: za duzo!\n", &attempts);
+            attempts++;
         }
-        else if (l < n)
+        else if (guess < number)
         {
-            printf("Za malo!\n");
+            printf("%d proba: za malo!\n");
+            attempts++;
         }
         else
         {
-            printf("Wygrales!\n");
-            w = 1;
+            printf("Gratulacje: Wygrales w %d probie!\n");
+            win = 1;
         }
 
     }
-    while (w == 0);
+    while (win == 1);
 }
