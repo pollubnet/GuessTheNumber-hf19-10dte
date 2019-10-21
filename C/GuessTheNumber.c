@@ -6,7 +6,7 @@ int main()
 {
     srand(time(NULL));
 
-    int n = rand() % 100;
+    int n = (rand()  %  100)+1;
 
     char w = 0;
 
@@ -15,7 +15,7 @@ int main()
         printf("Podaj liczbe: ");
         int l;
         scanf("%d", &l);
-        
+
         if (l > n)
         {
             printf("Za duzo!\n");
@@ -32,4 +32,3 @@ int main()
 
     }
     while (w == 0);
-}
