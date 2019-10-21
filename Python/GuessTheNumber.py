@@ -4,8 +4,9 @@ def main():
     n = randint(1, 100)
 
     w = False
-
+    i = 0
     while w == False:    
+        i += 1
         print("Podaj liczbe: ", end='')
         l = int(input())
         
@@ -15,6 +16,7 @@ def main():
             print("Za malo!")        
         else:        
             print("Wygrales!")
+            print("Za ",i, " razem" )
             w = True
 
 if __name__ == "__main__":
