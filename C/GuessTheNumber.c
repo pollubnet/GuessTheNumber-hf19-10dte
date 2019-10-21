@@ -6,7 +6,7 @@ int main()
 {
     srand(time(NULL));
 
-    int n = rand() % 100;
+    int n = rand() % 100, win = 1;
 
     char w = 0;
 
@@ -15,18 +15,21 @@ int main()
         printf("Podaj liczbe: ");
         int l;
         scanf("%d", &l);
-        
+
         if (l > n)
         {
             printf("Za duzo!\n");
+            win++;
         }
         else if (l < n)
         {
             printf("Za malo!\n");
+            win++;
         }
         else
         {
             printf("Wygrales!\n");
+            printf("Liczba ruchow: %i\n",win);
             w = 1;
         }
 
